@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: none;
+    box-sizing: border-box;
 }
 
 body{
@@ -134,8 +134,8 @@ header{
 /* =============================== Cartão =============================== */
 
 .card-container{
-    width: 370px;
-    height: 500px;
+    width: 420px;
+    height: 550px;
     background-color: rgb(1, 40, 74);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.345);
@@ -145,8 +145,8 @@ header{
 }
 
 .card {
-    width: 330px;
-    height: 200px;
+    width: 377px;
+    height: 250px;
     background: linear-gradient(90deg, #008bdb, #4355ad);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -240,6 +240,7 @@ header{
 .card-info {
     display: flex;
     justify-content: space-between;
+    margin-top: 16px;
 }
 
 .card-holder, .card-expiry {
@@ -270,8 +271,8 @@ header{
 /* =============================== Saldo =============================== */
 
 .saldo-container{
-    width: 360px;
-    height: 500px;
+    width: 420px;
+    height: 550px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.345);
@@ -303,8 +304,8 @@ header{
 
 .perfil-container{
     padding: 20px 4%;
-    width: 360px;
-    height: 500px;
+    width: 380px;
+    height: 550px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.345);
@@ -357,67 +358,94 @@ header{
 
 /* =============================== Investimentos =============================== */
 
-.investments{
-    padding: 20px 4%;
-    height: 700px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Estilos para a seção de investimentos semelhante ao Inter */
+
+.investments {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
 }
 
-.section-title-1 h1{
+.investment-header {
     text-align: center;
-    margin: 50px;
-    font-size: 35px;
-    font-weight: 300;
+    margin-bottom: 40px;
 }
 
-.section-title-1 span{
+
+.investment-header h1 {
+    font-size: 36px;
+    color: rgb(1, 40, 74);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.investment-header h1 span{
     color: rgb(0, 96, 180);
 }
 
-.chart-container {
-    width: 60%; /* Largura de 80% do contêiner pai */
-    max-width: 500px; /* Define uma largura máxima para evitar que o container fique muito grande */
-    max-height: 540px;
-    padding: 30px; /* Adiciona algum espaço interno */
-    background-color: #f5f5f5; /* Cor de fundo */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+.investment-header p {
+    font-size: 18px;
+    color: #6c757d;
 }
 
-.coins-container{
-    height: 170px;
-    width: 300px;
-    background-color: #fff;
-    border-radius: 40px;
-    gap: 30px;
-    margin-left: 20px;
+.investment-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.investment-option {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    max-height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.investment-option:hover {
+    transform: translateY(-5px);
+}
+
+.investment-info {
+    padding: 20px;
+}
+
+.investment-info h2 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.investment-info p {
+    font-size: 16px;
+    color: #6c757d;
     margin-bottom: 20px;
 }
 
-.coins-container h1{
-    font-size: 30px;
-    margin-left: 10px;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(1, 40, 74);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.coins-container i{
-    color: rgb(0, 96, 180);
-    margin-left: 10px;
+.button:hover {
+    background-color: #0056b3;
 }
 
-.coins-container h3{
-    font-size: 20px;
-    color: rgb(0, 67, 126);
-    margin-left: 10px;
-}
-
-.coins-container h3 span{
-    color: black;
-}
-
-canvas {
+.investment-option img {
     width: 100%;
-    height: 400px;
+    height: auto;
+    display: block;
 }
+
+
+
 
 /* =============================== Vantagens =============================== */
 
@@ -493,6 +521,7 @@ canvas {
     padding: 50px 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
 }
 
 .services-section h2 {

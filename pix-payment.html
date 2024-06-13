@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/pixstyles.css">
+    <title>Pagamento via PIX</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pagamento via PIX</h1>
+    
+    <form id="pixForm" action="#" method="POST">
+        <div class="form-group">
+            <label for="chave_pix">Chave PIX</label>
+            <input type="text" id="chave_pix" name="chave_pix" placeholder="Digite a chave PIX" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="valor">Valor</label>
+            <input type="text" id="valor" name="valor" placeholder="R$ 0,00" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="descricao">Descrição (opcional)</label>
+            <textarea id="descricao" name="descricao" placeholder="Digite uma descrição"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-default pix">Enviar PIX</button>
+    </form>
+
+    <a href="index.html" class="btn-voltar">Voltar</a>
+</div>
+
+<!-- Modal de Confirmação -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Pagamento enviado com sucesso!</p>
+    </div>
+</div>
+
+<script src="src/javascript/pix.js"></script>
+</body>
+</html>

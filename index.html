@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/e9d2580056.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="src/css/styles.css">
+
+
+    <title>SimpleBank</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="nav-logo">
+                <i class="fa-solid fa-building-columns">SimpleBank</i>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home" class="links">Conta Digital</a></li>
+                <li><a href="#investments" class="links">Investimentos</a></li>
+                <li><a href="#benefits" class="links">Vantagens</a></li>
+                <li><a href="#services" class="links">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="home-container">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+                        <div class="card-logo">SimpleBank</div>
+                            <div class="card-number">2352 5678 9012 3456</div>
+                            <div class="card-info">
+                                <div class="card-holder">
+                                    <span>Nome do Titular</span>
+                                    <strong>Gabriel de Carvalho Andrade</strong>
+                                </div>
+                                <div class="card-expiry">
+                                    <span>Validade</span>
+                                    <strong>12/28</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="cvv-container">
+                                <span>CVV</span>
+                                <strong>592</strong>
+                            </div>
+                            <div class="stripe"></div>
+                        </div>                    
+                    </div>
+                </div>
+        
+                <div class="saldo-container">
+                    <h3>Saldo</h3>
+                    <h1><span>R$ </span>2347,89</h1>
+                    
+                    <button class="btn-default pix">
+                        <i class="fa-brands fa-pix"></i>
+                        <h4>PIX</h4>
+                    </button>
+                    
+        
+                    <button class="btn-default extrato">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <h4>EXTRATO</h4>
+                    </button>
+        
+                    <button class="btn-default investir">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h4>INVESTIR</h4>
+                    </button>
+        
+                </div>
+        
+                <div class="perfil-container">
+                    <div class="perfil-img">
+                        <img src="src/images/avatar.jpg" alt="image" width="200px">
+                    </div>
+        
+                    <div class="perfil-info">
+                        <h1>Gabriel</h1>
+                        <h3>de Carvalho Andrade</h3>
+                    </div>
+        
+                    <div class="perfil-config">
+                        <h1>Configurações</h1>
+                        <h1>Informações</h1>
+                        <h1>Benefícios</h1>
+                        <h1><span><i class="fa-solid fa-right-from-bracket"></i>Logout</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="investments" id="investments">
+            <div class="section-title-1">
+                <h1>Investi<span>mentos</span></h1>
+            </div>
+        
+            <div class="flex">
+                <div class="chart-container">
+                    <canvas id="meuGrafico"></canvas>
+                </div>
+
+                <div class="inline-block">
+                    <div class="coins-container">
+                        <h1>Dólar Comercial</h1>
+                        <h3>R$ <span>5,33</span><i class="fa-solid fa-arrow-trend-up"></i></h3>
+                    </div>
+
+                    <div class="coins-container">
+                        <h1>Dólar Turismo</h1>
+                        <h3>R$ <span>5,50</span><i class="fa-solid fa-arrow-trend-up"></i></h3>
+                    </div>
+                </div>
+            </div> 
+            
+        </section>
+
+        <section class="benefits-section" id="benefits">
+            <div class="container">
+                <h2>Vantagens de ter</h2>
+                <h1>Cartão SimpleBank</h1>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <h3>Cashback em Compras</h3>
+                        <p>Receba até 5% de volta em todas as suas compras feitas com o Cartão SimpleBank.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-lock"></i>
+                        <h3>Segurança Avançada</h3>
+                        <p>Desfrute de tecnologia de segurança de ponta para proteger suas transações.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-plane-up"></i>
+                        <h3>Benefícios em Viagens</h3>
+                        <p>Aproveite acesso a salas VIP em aeroportos e seguros de viagem gratuitos.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-gift"></i>
+                        <h3>Programa de Recompensas</h3>
+                        <p>Acumule pontos e troque por produtos, viagens e muito mais.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="services-section" id="services">
+            <div class="container">
+                <h2>Nossos <span>Serviços</span></h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-university"></i>
+                        <h3>Conta Corrente</h3>
+                        <p>Abra uma conta corrente gratuita e gerencie suas finanças facilmente.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Cartões de Crédito</h3>
+                        <p>Escolha entre uma variedade de cartões de crédito com benefícios exclusivos.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Aplicativo Móvel</h3>
+                        <p>Faça transações bancárias e gerencie sua conta em qualquer lugar com nosso aplicativo móvel.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-lock"></i>
+                        <h3>Segurança</h3>
+                        <p>Utilizamos tecnologia avançada para garantir a segurança das suas transações online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

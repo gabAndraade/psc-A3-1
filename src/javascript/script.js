@@ -87,3 +87,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-profile');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Atualiza o nome do perfil
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        document.getElementById('profile-first-name').textContent = firstName;
+        document.getElementById('profile-last-name').textContent = lastName;
+
+        // Atualiza a imagem do perfil (se for o caso)
+        const fileInput = document.getElementById('profile-image-file');
+        if (fileInput.files && fileInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-image').src = e.target.result;
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+
+        // Limpa o formulário (opcional)
+        form.reset();
+    });
+});
+

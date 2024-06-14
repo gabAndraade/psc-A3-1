@@ -6,17 +6,11 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/e9d2580056.js" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <link rel="stylesheet" href="src/css/styles.css">
-    
-
-
     <title>SimpleBank</title>
 </head>
 <body>
@@ -33,23 +27,22 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="home" id="home">
             <div class="home-container">
                 <div class="card-container">
                     <div class="card">
                         <div class="card-front">
-                        <div class="card-logo">SimpleBank</div>
-                            <div class="card-number">2352 5678 9012 3456</div>
+                            <div class="card-logo">SimpleBank</div>
+                            <div class="card-number" id="card-number">2352 5678 9012 3456</div>
                             <div class="card-info">
                                 <div class="card-holder">
                                     <span>Nome do Titular</span>
-                                    <strong>Gabriel de Carvalho Andrade</strong>
+                                    <strong id="card-holder">Gabriel de Carvalho Andrade</strong>
                                 </div>
                                 <div class="card-expiry">
                                     <span>Validade</span>
-                                    <strong>12/28</strong>
+                                    <strong id="card-expiry">12/28</strong>
                                 </div>
                             </div>
                         </div>
@@ -62,39 +55,30 @@
                         </div>                    
                     </div>
                 </div>
-        
                 <div class="saldo-container">
                     <h3>Saldo</h3>
                     <h1><span>R$ </span>2347,89</h1>
-                    
                     <button class="btn-default pix">
                         <i class="fa-brands fa-pix"></i>
                         <h4>PIX</h4>
                     </button>
-                    
-        
                     <button class="btn-default extrato">
                         <i class="fa-solid fa-circle-dollar-to-slot"></i>
                         <h4>EXTRATO</h4>
                     </button>
-        
                     <button class="btn-default investir">
                         <i class="fa-solid fa-chart-line"></i>
                         <h4>INVESTIR</h4>
                     </button>
-        
                 </div>
-        
                 <div class="perfil-container">
                     <div class="perfil-img">
-                        <img src="src/images/c027bec07c2dc08b9df60921dfd539bd.jpg" alt="image" width="200px">
+                        <img id="profile-image" src="src/images/c027bec07c2dc08b9df60921dfd539bd.jpg" alt="image" width="200px">
                     </div>
-        
                     <div class="perfil-info">
-                        <h1>Gabriel</h1>
-                        <h3>de Carvalho Andrade</h3>
+                        <h1 id="profile-first-name">Gabriel</h1>
+                        <h3 id="profile-last-name">de Carvalho Andrade</h3>
                     </div>
-        
                     <div class="perfil-config">
                         <h1>Configurações</h1>
                         <h1>Informações</h1>
@@ -104,13 +88,11 @@
                 </div>
             </div>
         </section>
-
         <section class="investments">
             <div class="investment-header">
                 <h1>Investi<span>mentos</span></h1>
                 <p>Conheça nossas opções e invista com segurança</p>
             </div>
-        
             <div class="investment-options">
                 <div class="investment-option">
                     <div class="investment-info">
@@ -120,7 +102,6 @@
                     </div>
                     <img src="src/images/austin-distel-DfjJMVhwH_8-unsplash.jpg" alt="Fundos de Investimento">
                 </div>
-        
                 <div class="investment-option">
                     <div class="investment-info">
                         <h2>Tesouro Direto</h2>
@@ -129,7 +110,6 @@
                     </div>
                     <img src="src/images/towfiqu-barbhuiya-jpqyfK7GB4w-unsplash.jpg" alt="Tesouro Direto">
                 </div>
-        
                 <div class="investment-option">
                     <div class="investment-info">
                         <h2>Renda Fixa</h2>
@@ -140,8 +120,6 @@
                 </div>
             </div>
         </section>
-        
-
         <section class="benefits-section" id="benefits">
             <div class="container">
                 <h2>Vantagens de ter</h2>
@@ -169,9 +147,7 @@
                     </div>
                 </div>
             </div>
-            
         </section>
-
         <section class="services-section" id="services">
             <div class="container">
                 <h2>Nossos <span>Serviços</span></h2>
@@ -183,7 +159,7 @@
                     </div>
                     <div class="service-item">
                         <i class="fas fa-credit-card"></i>
-                        <h3>Cartões de Crédito</h3>
+                        <h3>Cartões de Crédito</h4>
                         <p>Escolha entre uma variedade de cartões de crédito com benefícios exclusivos.</p>
                     </div>
                     <div class="service-item">
@@ -194,14 +170,31 @@
                     <div class="service-item">
                         <i class="fas fa-lock"></i>
                         <h3>Segurança</h3>
-                        <p>Utilizamos tecnologia avançada para garantir a segurança das suas transações online.</p>
+                        <p>Contamos com a mais avançada tecnologia de segurança para proteger seus dados.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        
-    </main>
-    <script src="src/javascript/script.js"></script>
-</body>
-</html>
+        <section class="exchange-rate-section">
+            <div class="container">
+                <h2>Taxa de Câmbio</h2>
+                <canvas id="usdBrlChart"></canvas>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-building-columns">SimpleBank</i>
+                </div>
+                <ul class="footer-list">
+                    <li><a href="#home" class="links">Conta Digital</a></li>
+                    <li><a href="#investments" class="links">Investimentos</a></li>
+                    <li><a href="#benefits" class="links">Vantagens</a></li>
+                    <li><a href="#services" class="links">Serviços</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="src/javascript/script.js"></script>
+    </body>
+    </html>
+    
